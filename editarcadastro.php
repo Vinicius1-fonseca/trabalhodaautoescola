@@ -44,11 +44,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 0;
             padding: 0;
             display: flex;
-        
             background: linear-gradient(to bottom, #9ADBAF, #BFDBD2);
  }
 
- .sidebar {
+        .sidebar {
             background-color: #BFDBD2;
             color: #000;
             width: 200px;
@@ -208,6 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="modal-content">
     <span class="close">&times;</span>
     <h1>EDITAR DADOS</h1>
+    
     <!-- Ao enviar o formulário a página recarrega permitindo executar o php encima  -->
     <form id="editForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
         <label for="nomealuno">Nome:</label>
