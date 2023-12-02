@@ -7,56 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de cadastro de alunos </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-align: center;
-            color: #000000;
-        }
-    </style>
 </head>
-<body>
-<style>
- body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to bottom, #9ADBAF, #BFDBD2);
- }
 
+    
 
-</style>
-
-
-</body>
-<h2>Cadastro de Alunos</h2>
-    <form id="alunoForm">
-
-
-<style>
-    body{
-    font-family: "Times New Roman";
-    background-color: #fff;
-}
-</style>
-
-</body>
-</html>
    
    <style>
 
@@ -67,17 +21,20 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden; 
             height: 100vh;
+            background: url('imagens/OIG.jpg') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
         }
 
+
         form {
-            background-color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
             max-width: 400px;
             width: 100%;
         }
@@ -107,19 +64,56 @@
         button:hover {
             background-color: #45a049;
         }
+        main{
+            background-color:#f4f4f4;
+            width: 440px;
+            height: 100vh;
+            position: absolute; 
+            overflow: auto;
+             z-index: 1;
+        }
+        h2{
+            text-align: center; 
+            width: 100%
+        }
+        img{
+            width: 240px;
+            height: 240px;
+           
+        }
+        h1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            text-align: center;
+            color: #000000;
+            text-shadow: 3px 0px 2px rgba(255, 0, 25, 1);
+            z-index: 1;
+            font-size: 50px;
+            color:#f4f4f4;
+            text-shadow: 3px 0px 2px rgba(255, 0, 25, 1);
+            
+            
+        }
     </style>
 </head>
 <body>
 
     
-
-    <form action="processar_login.php" method="post">
+        <main>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
+        </div>
+        <h2>Cadastro de Alunos</h2>
+    <form action="tratamento_dados/aluno.php" method="POST">
         <label for="nomealuno">Nome:</label>
         <input type="text" id="nomealuno" name="nomealuno" required>
 
         
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" maxlength="14">
+    <input type="text" id="cpf" name="cpf" maxlength="14">
 
     <script>
         document.getElementById('cpf').addEventListener('input', function (event) {
@@ -149,28 +143,8 @@
         <input type="text" id="endereco" name="endereco" required>
 
         <label for="fone">Celular com DDD</label>
-	<input type="tel" id="fone" name="fone" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
+	<input type="tel" id="fone" name="fone" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">  
         <button type="submit">cadastrar </button>
+
     </form>
-    </form>
-</body>
-</html>
+        </main>
