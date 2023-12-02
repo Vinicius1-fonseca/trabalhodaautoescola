@@ -5,7 +5,7 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            background: linear-gradient(to bottom, #9ADBAF, #BFDBD2);
+            background-color: #fff;
             margin: 0;
         }  
         html, body {
@@ -15,7 +15,7 @@
         }
 
         .sidebar {
-            background-color: #BFDBD2;
+            background-color: #fff;
             color: #000;
             width: 200px;
             padding: 20px;
@@ -23,7 +23,7 @@
         }
         .sidebar a {
             display: block;
-            background-color: #9ADBAF;
+            background-color: #fff;
             color: black;
             text-decoration: none;
             padding: 10px;
@@ -94,8 +94,6 @@
     <div class="sidebar">
         <h1>Dashboard</h1>
         <a href="editarcadastro.php">Editar cadastro</a>
-        <a href="cadastrocarro.php">Cadastrar carro</a>
-        <a href="editarcarro.php">Editar carro</a>
         <a href="paginaagendamento.php">Agendar aula</a>
         <a href="login.php">Sair</a>
     </div>
