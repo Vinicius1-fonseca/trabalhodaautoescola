@@ -130,12 +130,12 @@
 
     
 
-    <form action="processar_login.php" method="post">
-        <label for="username">Nome de usuário:</label>
-        <input type="text" id="username" name="username" required>
+    <form action="tratamento_dados/login.php" method="POST">
+        <label for="nome">Nome de usuário:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="cpf">Senha:</label>
+        <input type="text" id="cpf" name="cpf" required>
 
         <button type="submit">Login</button>
     </form>

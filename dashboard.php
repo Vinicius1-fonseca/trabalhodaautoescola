@@ -49,7 +49,7 @@
 <body>
     <div class="sidebar">
         <h1>Dashboard</h1>
-        <a href="editarluno.php">Editar aluno</a>
+        <a href="editarcadastro.php">Editar cadastro</a>
         <a href="cadastrocarro.php">Cadastrar carro</a>
         <a href="editarcarro.php">Editar carro</a>
         <a href="paginaagendamento.php">Agendar aula</a>
