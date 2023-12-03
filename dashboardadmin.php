@@ -52,7 +52,7 @@
   </div>
 
   <div class="content">
-    <h3>Lista de Carros</h3>
+    <h1>Lista de Carros</h3>
 
     <!-- Barra de busca -->
     <label for="search">Buscar Carro:</label>
