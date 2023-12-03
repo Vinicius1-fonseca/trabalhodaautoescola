@@ -1,114 +1,159 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-<script src="script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de agendamento </title>
-</head>
-
-    
-
-   
-   <style>
-
-
-
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            display: flex;
+            background-color: #fff;
+            margin: 0;
+            flex-direction: column;
+            overflow-x: hidden;
+        }  
+        html, body {
             margin: 0;
             padding: 0;
-            overflow: hidden; 
-            height: 100vh;
-            background: url('imagens/baliza.jpg'); 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
             
-        }
-
-
-        form {
-            padding: 20px;
-            
-            max-width: 400px;
-            width: 100%;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #DB423C;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-        main{
-            background-color:#f4f4f4;
-            width: 440px;
-            height: 100vh;
-            position: absolute; 
-            overflow: auto;
-             z-index: 1;
-        }
-        h2{
-            text-align: center; 
-            width: 100%
         }
         img{
-            width: 240px;
-            height: 240px;
+            width: 200px;
+            height: 200px;
+            background: #fff;
+             color: #fff;
+        }
+
+        .header {
+            background-color: #fff;
+            color: #000;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header a {
            
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            padding: 25px;
+            margin-left: -2px;
+            border-radius: 5px;
         }
-        h1 {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3em;
+        svg{
+            margin-left: 1100px;
+            width: 45px;
+            height: 45px;
+        }
+        .conteudo {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: flex-start; 
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .materia-titulo {
             text-align: center;
-            color: #000000;
-            text-shadow: 3px 0px 2px rgba(255, 0, 25, 1);
-            z-index: 1;
-            font-size: 50px;
-            color:#f4f4f4;
-            text-shadow: 3px 0px 2px rgba(255, 0, 25, 1);
-            
-            
+            width: 100%;
+            margin-bottom: 20px;
         }
+        .card {
+            background-color: #fff;
+            width: 180px;
+            height: 260px;
+            border-radius: 12px;
+            box-shadow: 4px 4px 12px #aaaa;
+            margin-right: 20px;
+            margin-bottom: 400px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .card div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            height: 48%;
+        }
+        .card h1 {
+            font-size: 1.2rem;
+            color:#000
+        }
+        .card h2 {
+            font-size: .9rem;
+            color:#000;
+        }
+        .card button {
+            background-color: #2192FF;
+            height: 30px;
+            border: none;
+            padding: 4px;
+            width: 80%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .card button:hover {
+            background-color: #137de8;
+            cursor: pointer;
+        }
+        .teste {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+}
+        .meus-agendamentos {
+            text-align: center;
+            margin-top: -317px; 
+}
     </style>
 </head>
 <body>
+<<<<<<< HEAD
+    <div class="header">
+        <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
+        <div class="links">
+        
+            <a href="dashboard.php">voltar pro menu principal</a>
+        </div>
+        <a href="editarcadastro.php">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+        </a>
+    </div>
+    <img class="teste" src="imagens/OIG.jpg" alt="">
+    
+=======
 
     
-        <main>
+<main>
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         </div>
-        
+>>>>>>> 82939efebc6a842332abcd69deb324a4bf33f7dc
+        <form action="tratamento_dados/agendamento.php" method="POST">
         <label for="veiculoaula">Selecione o veiculo :</label>
-        <input type="test" id="veiculoaula" name="veiculoaula" required>
+        <select id="veiculoaula" name="veiculoaula" required>
+        <?php
+        include "conexao.php";
+
+        $sql = "SELECT modelo FROM carros WHERE id NOT IN (SELECT carro_id FROM agendamentos)";
+        $result = $con->query($sql);
+
+        while ($row = $result->fetch_assoc()) {
+        echo '<option value="' . $row['modelo'] . '">' . $row['modelo'] . '</option>';
+        }
+        ?>
+        </select>
         
         
         <label for="dataaula">Selecione a data :</label>
@@ -118,4 +163,11 @@
         <label for="horarioaula">horario desejado:</label>
 
         <input type="time" id="hora-desejada" name="hora-desejada" required>
+        <button>confirmar</button>
+        </form>
+<<<<<<< HEAD
     </body>
+
+=======
+    </body>
+>>>>>>> 82939efebc6a842332abcd69deb324a4bf33f7dc
