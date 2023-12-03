@@ -47,17 +47,14 @@
         }
         .conteudo {
             display: flex;
-            flex-wrap: wrap; 
-            justify-content: center; 
-            align-items: flex-start; 
-            flex-grow: 1;
-            padding: 20px;
-            width: 2000px;
-            height: 800px;
-            border-color:#000;
-            border-width: 2px;
-            border-style:solid;
-           
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    margin: 0 auto; 
+    max-width: 600px;
+    
+            
         }
 
         .materia-titulo {
@@ -134,8 +131,7 @@
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-            <a href="editarcadastro.php">Editar Cadastro</a>
-            <a href="paginaagendamento.php">Agendar aula</a>
+            <a href="dashboardadmin.php">voltar pra dashboard</a>
             <a href="paginalogin.php">Sair</a>
         </div>
         <a href="editarcadastro.php">
@@ -147,35 +143,30 @@
     </div>
     <img class="teste" src="imagens/OIG.jpg" alt="">
     <div class="conteudo">
-        <h1 class="materia-titulo">Matérias</h1>
-        <div class="card">
-            <img src="imagens/sinais-de-trânsito-dok-despachante-regulamentação-1024x739.png">
-            <div>
-                <h1>Aula</h1>
-                <h2>Sinalizações de Trânsito</h2>
-                <button>Saiba mais</button>
-            </div>
+    <h1 class="materia-titulo">Pagina de edição de carro </h1>
+        <h1 class="materia-titulo">Dados do  veiculo </h1>
+    
+        <div class="row flex-center">
+        <div class="form-div">
+            <form class="form" action="../../pages/user/edit.php" method="POST">
+            <label for="modelocarro">Modelo do carro:</label>
+        <input type="text" id="modelocarro" name="modelocarro" required>
+        <br><br>
+        <label for="marcacarro">marca:</label>
+        <input type="text" id="marcacarro" name="marcacarro" required>
+        <br><br>
+        <label for="anocarro">ano:</label>
+        <input type="text" id="anocarro" name="anocarro" required>
+        <br><br>
+        <label for="placacarro">placa:</label>
+        <input type="text" id="placacarro" name="placacarro" required>
+        <br><br>
+        <label for="capacidadecarro">capacidade:</label>
+        <input type="number" id="capacidadecarro" name="capacidadecarro" required>
+        <br><br>
+                <button class="btn btn-success text-white" type="submit">Save</button>
+            </form>
         </div>
-
-        <div class="card">
-            <img src="imagens/download.jpg">
-            <div>
-                <h1>Aula</h1>
-                <h2>Circulação e Conduta</h2>
-                <button>Saiba mais</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagens/5f3d9-MENDES--KOCH---DIREO-DEFENSIVA.jpg">
-            <div>
-                <h1>Aula</h1>
-                <h2>Sinalizações de Trânsito</h2>
-                <button>Saiba mais</button>
-            </div>
-        </div>
-        </div>
-        <h1 class="meus-agendamentos">Meus Agendamentos</h1>
-        </div>
-        
-
+    </div>
+    </div>
+       

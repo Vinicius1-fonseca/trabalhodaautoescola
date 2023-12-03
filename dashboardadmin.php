@@ -51,6 +51,9 @@
             align-items: flex-start; 
             flex-grow: 1;
             padding: 20px;
+            border-color:#000;
+            border-width: 2px;
+            border-style:solid;
         }
 
         .materia-titulo {
@@ -119,8 +122,9 @@
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-        
-            <a href="dashboard.php">voltar pro menu principal</a>
+            <a href="cadastrocarro.php">cadastrar carro</a>
+            <a href="paginalogin.php">sair</a>
+            
         </div>
         <a href="editarcadastro.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -131,30 +135,11 @@
     </div>
     <img class="teste" src="imagens/OIG.jpg" alt="">
     
-        <form action="tratamento_dados/agendamento.php" method="POST">
-        <label for="veiculoaula">Selecione o veiculo :</label>
-        <select id="veiculoaula" name="veiculoaula" required>
-        <?php
-        include "conexao.php";
-
-        $sql = "SELECT modelo FROM carros WHERE id NOT IN (SELECT carro_id FROM agendamentos)";
-        $result = $con->query($sql);
-
-        while ($row = $result->fetch_assoc()) {
-        echo '<option value="' . $row['modelo'] . '">' . $row['modelo'] . '</option>';
-        }
-        ?>
-        </select>
-        
-        
-        <label for="dataaula">Selecione a data :</label>
-        <input type="date" id="dataaula" name="dataaula" required>
-
-
-        <label for="horarioaula">horario desejado:</label>
-
-        <input type="time" id="hora-desejada" name="hora-desejada" required>
-        <button>confirmar</button>
-        </form>
-    </body>
-
+    <br>
+    
+    <div class="conteudo">
+        <h1 class="carroscadastrados">carros cadastrados </h1>
+    </div><br><br><br><br><br><br><br><br><br><br>
+    <div class="conteudo">
+        <h1 class="Alunoscasadtrados">alunos cadastrados </h1>
+    </div>

@@ -134,8 +134,7 @@
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-            <a href="editarcadastro.php">Editar Cadastro</a>
-            <a href="paginaagendamento.php">Agendar aula</a>
+            <a href="dashboard.php">voltar pra dashboard</a>
             <a href="paginalogin.php">Sair</a>
         </div>
         <a href="editarcadastro.php">
@@ -147,35 +146,51 @@
     </div>
     <img class="teste" src="imagens/OIG.jpg" alt="">
     <div class="conteudo">
-        <h1 class="materia-titulo">Matérias</h1>
-        <div class="card">
-            <img src="imagens/sinais-de-trânsito-dok-despachante-regulamentação-1024x739.png">
-            <div>
-                <h1>Aula</h1>
-                <h2>Sinalizações de Trânsito</h2>
-                <button>Saiba mais</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagens/download.jpg">
-            <div>
-                <h1>Aula</h1>
-                <h2>Circulação e Conduta</h2>
-                <button>Saiba mais</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="imagens/5f3d9-MENDES--KOCH---DIREO-DEFENSIVA.jpg">
-            <div>
-                <h1>Aula</h1>
-                <h2>Sinalizações de Trânsito</h2>
-                <button>Saiba mais</button>
-            </div>
-        </div>
-        </div>
-        <h1 class="meus-agendamentos">Meus Agendamentos</h1>
-        </div>
+        <h1 class="materia-titulo">Meus dados </h1>
         
+        <form action="tratamento_dados/aluno.php" method="POST">
+        <label for="nomealuno">Nome:</label>
+        <input type="text" id="nomealuno" name="nomealuno" required>
+        <br>  <br>
 
+        
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" maxlength="14">
+
+    <script>
+        document.getElementById('cpf').addEventListener('input', function (event) {
+            let inputValue = event.target.value.replace(/\D/g, '');
+            
+            if (inputValue.length > 11) {
+                inputValue = inputValue.slice(0, 11);
+            }
+
+            if (inputValue.length > 9) {
+                event.target.value = inputValue.replace(/(\d{3})(\d{3})(\d{3})/, '$1.$2.$3-');
+            } else if (inputValue.length > 6) {
+                event.target.value = inputValue.replace(/(\d{3})(\d{3})/, '$1.$2.');
+            } else if (inputValue.length > 3) {
+                event.target.value = inputValue.replace(/(\d{3})/, '$1.');
+            } else {
+                event.target.value = inputValue;
+            }
+        });
+    </script>
+      <br>  <br>
+
+        <label for="Datanasc">Data de Nascimento:</label>
+        <input type="date" id="datanasc" name="datanasc" required>
+        <br>  <br>
+        
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+        <br>  <br>
+        <label for="fone">Celular com DDD</label>
+	<input type="tel" id="fone" name="fone" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">  
+    <br>  <br>
+        <button type="submit">editar</button>
+        </form>
+    </div>
+    
+
+       
