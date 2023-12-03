@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,18 +20,13 @@
             height: 200px;
             background: #fff;
              color: #fff;
-             border-width: 3px 3px 3px 3px; 
-             border-style:solid; 
-             border-color: #000 #000 #000 #000; 
-             padding: 3px;
-        
         }
 
         .header {
             background-color: #fff;
             color: #000;
             width: 100%;
-            padding: 30px;
+            padding: 20px;
             display: flex;
             align-items: center;
         }
@@ -50,29 +44,83 @@
             width: 45px;
             height: 45px;
         }
+        .conteudo {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: flex-start; 
+            flex-grow: 1;
+            padding: 20px;
+        }
 
+        .materia-titulo {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #fff;
+            width: 180px;
+            height: 260px;
+            border-radius: 12px;
+            box-shadow: 4px 4px 12px #aaaa;
+            margin-right: 20px;
+            margin-bottom: 400px;
+        }
+        .card img {
+            width: 100%;
+            height: 130px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .card div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            height: 48%;
+        }
         .card h1 {
             font-size: 1.2rem;
-            color:#000;
-            text-align: center;
+            color:#000
         }
-        
-        
+        .card h2 {
+            font-size: .9rem;
+            color:#000;
+        }
+        .card button {
+            background-color: #2192FF;
+            height: 30px;
+            border: none;
+            padding: 4px;
+            width: 80%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .card button:hover {
+            background-color: #137de8;
+            cursor: pointer;
+        }
         .teste {
             width: 100%;
             height: 300px;
             object-fit: cover;
 }
-      
+        .meus-agendamentos {
+            text-align: center;
+            margin-top: -317px; 
+}
     </style>
 </head>
 <body>
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-            <a href="">Editar carro</a>
-            <a href="cadastrocarro.php">cadastrar carro</a>
-            <a href="login.php">Sair</a>
+        
+            <a href="dashboard.php">voltar pro menu principal</a>
         </div>
         <a href="editarcadastro.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -81,8 +129,32 @@
             </svg>
         </a>
     </div>
-    <img class="teste" src="imagens/veiculoplaca.jpg" alt="">
+    <img class="teste" src="imagens/OIG.jpg" alt="">
     
-    <div class="container">
-      <h1>Lista de carros</h1>
-    </div>
+        <form action="tratamento_dados/agendamento.php" method="POST">
+        <label for="veiculoaula">Selecione o veiculo :</label>
+        <select id="veiculoaula" name="veiculoaula" required>
+        <?php
+        include "conexao.php";
+
+        $sql = "SELECT modelo FROM carros WHERE id NOT IN (SELECT carro_id FROM agendamentos)";
+        $result = $con->query($sql);
+
+        while ($row = $result->fetch_assoc()) {
+        echo '<option value="' . $row['modelo'] . '">' . $row['modelo'] . '</option>';
+        }
+        ?>
+        </select>
+        
+        
+        <label for="dataaula">Selecione a data :</label>
+        <input type="date" id="dataaula" name="dataaula" required>
+
+
+        <label for="horarioaula">horario desejado:</label>
+
+        <input type="time" id="hora-desejada" name="hora-desejada" required>
+        <button>confirmar</button>
+        </form>
+    </body>
+
