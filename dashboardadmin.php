@@ -1,97 +1,88 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff; 
-      display: flex;
-    }
-
-    .sidebar {
-      background-color: #fff;
-      color: #000;
-      width: 200px;
-      padding: 20px;
-      height: 100vh;
-    }
-
-    .sidebar a {
-      display: block;
-      background-color: #fff;
-      color: black;
-      text-decoration: none;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-
-    .content {
-      padding: 20px;
-      flex-grow: 1;
-      background: rgba(255, 255, 255, 0.8); /* Adicionando um fundo branco semi-transparente ao conteúdo */
-    }
-
-    h3 {
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="sidebar">
-    <h1>instrutores </h1>
-    <a href="editarcadastro.php">Editar cadastro de usuario </a>
-    <a href="cadastrocarro.php">Editar carro</a>
-    <a href="editarcarro.php">Editar carro</a>
-    <a href="login.php">Sair</a>
-  </div>
-
-  <div class="content">
-    <h1>Lista de Carros</h3>
-
-    <!-- Barra de busca -->
-    <label for="search">Buscar Carro:</label>
-    <input type="text" id="search" oninput="searchCars()" placeholder="Digite o nome do carro">
-
-    <!-- Lista de carros -->
-    <ul id="carList">
-      <li>Ford Mustang</li>
-      <li>Chevrolet Camaro</li>
-      <li>Dodge Charger</li>
-      <li>Tesla Model S</li>
-      <!-- Adicione mais carros conforme necessário -->
-    </ul>
-
-    <script>
-      // Função para realizar a busca
-      function searchCars() {
-        // Obtém o valor digitado na barra de busca
-        var searchTerm = document.getElementById("search").value.toUpperCase();
-
-        // Obtém a lista de carros
-        var carList = document.getElementById("carList");
-
-        // Obtém todos os itens da lista de carros
-        var cars = carList.getElementsByTagName("li");
-
-        // Itera sobre os carros e mostra ou esconde conforme a busca
-        for (var i = 0; i < cars.length; i++) {
-          var carName = cars[i].textContent.toUpperCase();
-          if (carName.includes(searchTerm)) {
-            cars[i].style.display = "";
-          } else {
-            cars[i].style.display = "none";
-          }
+<link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #fff;
+            margin: 0;
+            flex-direction: column;
+            overflow-x: hidden;
+        }  
+        html, body {
+            margin: 0;
+            padding: 0;
+            
         }
-      }
-    </script>
-  </div>
+        img{
+            width: 200px;
+            height: 200px;
+            background: #fff;
+             color: #fff;
+             border-width: 3px 3px 3px 3px; 
+             border-style:solid; 
+             border-color: #000 #000 #000 #000; 
+             padding: 3px;
+        
+        }
 
-</body>
+        .header {
+            background-color: #fff;
+            color: #000;
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .header a {
+           
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            padding: 25px;
+            margin-left: -2px;
+            border-radius: 5px;
+        }
+        svg{
+            margin-left: 1100px;
+            width: 45px;
+            height: 45px;
+        }
 
-</html>
+        .card h1 {
+            font-size: 1.2rem;
+            color:#000;
+            text-align: center;
+        }
+        
+        
+        .teste {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+}
+      
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
+        <div class="links">
+            <a href="">Editar carro</a>
+            <a href="cadastrocarro.php">cadastrar carro</a>
+            <a href="login.php">Sair</a>
+        </div>
+        <a href="editarcadastro.php">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+        </a>
+    </div>
+    <img class="teste" src="imagens/veiculoplaca.jpg" alt="">
+    
+    <div class="container">
+      <h1>Lista de carros</h1>
+    </div>
