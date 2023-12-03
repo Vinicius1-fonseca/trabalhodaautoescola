@@ -18,7 +18,6 @@
         img{
             width: 200px;
             height: 200px;
-<<<<<<< HEAD
             background: #fff;
              color: #fff;
              border-width: 1px 1px 1px 1px; 
@@ -26,8 +25,6 @@
              border-color: #000 #000 #000 #000; 
              padding: 3px;
         
-=======
->>>>>>> 82939efebc6a842332abcd69deb324a4bf33f7dc
         }
 
         .header {
@@ -38,14 +35,8 @@
             display: flex;
             align-items: center;
         }
-<<<<<<< HEAD
         .header a {
            
-=======
-
-
-        .header a {
->>>>>>> 82939efebc6a842332abcd69deb324a4bf33f7dc
             background-color: #fff;
             color: black;
             text-decoration: none;
