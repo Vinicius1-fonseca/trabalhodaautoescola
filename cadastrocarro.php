@@ -108,7 +108,7 @@
         </div>
         <h2>Cadastro de Carros</h2>
        
-        <form action="processar_login.php" method="post">
+        <form action="tratamento_dados/carro.php" method="POST">
         <label for="modelocarro">Modelo do carro:</label>
         <input type="text" id="modelocarro" name="modelocarro" required>
         

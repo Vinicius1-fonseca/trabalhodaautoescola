@@ -102,13 +102,24 @@
 <body>
 
     
-        <main>
+<main>
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         </div>
-        
+        <form action="tratamento_dados/agendamento.php" method="POST">
         <label for="veiculoaula">Selecione o veiculo :</label>
-        <input type="test" id="veiculoaula" name="veiculoaula" required>
+        <select id="veiculoaula" name="veiculoaula" required>
+        <?php
+        include "conexao.php";
+
+        $sql = "SELECT modelo FROM carros WHERE id NOT IN (SELECT carro_id FROM agendamentos)";
+        $result = $con->query($sql);
+
+        while ($row = $result->fetch_assoc()) {
+        echo '<option value="' . $row['modelo'] . '">' . $row['modelo'] . '</option>';
+        }
+        ?>
+        </select>
         
         
         <label for="dataaula">Selecione a data :</label>
@@ -118,4 +129,6 @@
         <label for="horarioaula">horario desejado:</label>
 
         <input type="time" id="hora-desejada" name="hora-desejada" required>
+        <button>confirmar</button>
+        </form>
     </body>
