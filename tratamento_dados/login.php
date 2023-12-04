@@ -20,6 +20,21 @@ $resultado = $stmt->get_result();
 //armazenando a matriz resultante do banco de dados na variavel usuario
 $usuario = $resultado->fetch_assoc();
 
+//VERIFICAO ADMIN!!!!
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Obtém os dados do formulário
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+
+    // Verifica se as credenciais são válidas
+    if ($nome === 'admin' && $cpf === 'cpfadmin') {
+        // Credenciais corretas, redireciona para a página de administração
+        header('Location: ../dashboardadmin.php');
+        exit;
+}
+}
+
+
 if ($usuario) {
     // O usuário existe
     if ($cpf == $usuario['cpf'] && $nome == $usuario['nome']) {

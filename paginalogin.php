@@ -115,7 +115,7 @@
         <input type="text" id="nome" name="nome" required>
 
         <label for="cpf">Senha:</label>
-        <input type="text" id="cpf" name="cpf" required>
+        <input type="password" id="cpf" name="cpf" required>
 
         <button type="submit">Login</button>
     </form>

@@ -1,4 +1,5 @@
 <?php
+
 include "../conexao.php";
 session_start();
 $aluno_id = $_SESSION['id_usuario'];
@@ -6,9 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $carro = $_POST['veiculoaula'];
 $data = $_POST['dataaula'];
 $horario = $_POST['hora-desejada'];
-
-
-
 $sql = "SELECT id FROM carros WHERE modelo = '$carro'";
 $resultado = $con->query($sql);
 $row = $resultado->fetch_assoc();

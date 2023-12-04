@@ -37,7 +37,7 @@
             text-decoration: none;
             padding: 25px;
             margin-left: -2px;
-            border-radius: 5px;
+
         }
         svg{
             margin-left: 1100px;
@@ -51,9 +51,7 @@
             align-items: flex-start; 
             flex-grow: 1;
             padding: 20px;
-            border-color:#000;
-            border-width: 2px;
-            border-style:solid;
+
         }
 
         .materia-titulo {
@@ -65,7 +63,6 @@
             background-color: #fff;
             width: 180px;
             height: 260px;
-            border-radius: 12px;
             box-shadow: 4px 4px 12px #aaaa;
             margin-right: 20px;
             margin-bottom: 400px;
@@ -73,8 +70,7 @@
         .card img {
             width: 100%;
             height: 130px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+
         }
         .card div {
             display: flex;
@@ -122,7 +118,7 @@
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-            <a href="cadastrocarro.php">cadastrar carro</a>
+            <a href="cadastrocarro.php">Cadastrar carro</a>
             <a href="paginalogin.php">sair</a>
             
         </div>
@@ -138,8 +134,8 @@
     <br>
     
     <div class="conteudo">
-        <h1 class="carroscadastrados">carros cadastrados </h1>
+        <h1 class="carroscadastrados">Carros cadastrados </h1>
     </div><br><br><br><br><br><br><br><br><br><br>
     <div class="conteudo">
-        <h1 class="Alunoscasadtrados">alunos cadastrados </h1>
+        <h1 class="Alunoscasadtrados">Alunos cadastrados </h1>
     </div>

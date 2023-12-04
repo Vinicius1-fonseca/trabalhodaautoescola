@@ -2,7 +2,6 @@
 <html>
 <head>
     <style>
-       
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -19,8 +18,6 @@
         img{
             width: 200px;
             height: 200px;
-            background: #fff;
-             color: #fff;
         }
 
         .header {
@@ -31,8 +28,9 @@
             display: flex;
             align-items: center;
         }
+
+
         .header a {
-           
             background-color: #fff;
             color: black;
             text-decoration: none;
@@ -52,12 +50,6 @@
             align-items: flex-start; 
             flex-grow: 1;
             padding: 20px;
-            width: 2000px;
-            height: 800px;
-            border-color:#000;
-            border-width: 2px;
-            border-style:solid;
-           
         }
 
         .materia-titulo {
@@ -73,13 +65,12 @@
             box-shadow: 4px 4px 12px #aaaa;
             margin-right: 20px;
             margin-bottom: 400px;
-           
         }
         .card img {
             width: 100%;
             height: 130px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
         }
         .card div {
             display: flex;
@@ -91,11 +82,10 @@
         }
         .card h1 {
             font-size: 1.2rem;
-            color:#000
         }
         .card h2 {
             font-size: .9rem;
-            color:#000;
+            color: #aaaa;
         }
         .card button {
             background-color: #2192FF;
@@ -120,23 +110,15 @@
         .meus-agendamentos {
             text-align: center;
             margin-top: -317px; 
-            
-            border-color:#000;
-            border-width: 2px;
-            border-style:solid;
-            border-radius:50px;
 }
     </style>
 </head>
 <body>
-    <div id="div_principal">    
-    </div>
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-            <a href="editarcadastro.php">Editar Cadastro</a>
             <a href="paginaagendamento.php">Agendar aula</a>
-            <a href="paginalogin.php">Sair</a>
+            <a href="login.php">Sair</a>
         </div>
         <a href="editarcadastro.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -178,4 +160,3 @@
         <h1 class="meus-agendamentos">Meus Agendamentos</h1>
         </div>
         
-
