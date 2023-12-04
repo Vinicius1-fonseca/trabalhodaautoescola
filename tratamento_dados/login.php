@@ -31,10 +31,10 @@ if ($usuario) {
         $_SESSION['telefone'] = $usuario['telefone'];
         header("Location: ../dashboard.php");
     } else {
-        //login errado
+        echo 'Credencias inválidas!';
     }
 } else {
-        //usuario não existe
+    echo 'Usuário inexistente!';
 }
 }
 

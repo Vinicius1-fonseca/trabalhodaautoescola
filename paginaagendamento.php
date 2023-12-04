@@ -123,12 +123,12 @@
         
         
         <label for="dataaula">Selecione a data :</label>
-        <input type="date" id="dataaula" name="dataaula" required>
+        <input type="date" id="dataaula" name="dataaula" required required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="99/99/1111">
 
 
         <label for="horarioaula">horario desejado:</label>
 
-        <input type="time" id="hora-desejada" name="hora-desejada" required>
+        <input type="time" id="hora-desejada" name="hora-desejada" required pattern="[0-9]{2}:[0-9]{2}h" placeholder="99:11h">
         <button>confirmar</button>
         </form>
     </body>

@@ -113,7 +113,7 @@
 
         
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" maxlength="14">
+    <input type="text" id="cpf" name="cpf" maxlength="14" required pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="999.999.999-11">
 
     <script>
         document.getElementById('cpf').addEventListener('input', function (event) {
@@ -136,15 +136,15 @@
     </script>
 
         <label for="Datanasc">Data de Nascimento:</label>
-        <input type="date" id="datanasc" name="datanasc" required>
+        <input type="date" id="datanasc" name="datanasc" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="99/99/1111">
         
         
         <label for="endereco">Endereço:</label>
         <input type="text" id="endereco" name="endereco" required>
 
         <label for="fone">Celular com DDD</label>
-	<input type="tel" id="fone" name="fone" required pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="11 99999-9999">  
+	<input type="text" id="fone" name="fone" required pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="Digite o número de telefone." title="Digite dessa forma: (11) 00000-0000">  
         <button type="submit">cadastrar </button>
 
     </form>
-        </main>
+    </main>
