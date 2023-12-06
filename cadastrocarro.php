@@ -112,19 +112,19 @@
         <label for="modelocarro">Modelo do carro:</label>
         <input type="text" id="modelocarro" name="modelocarro" required>
         
-        <label for="marcacarro">marca:</label>
+        <label for="marcacarro">Marca:</label>
         <input type="text" id="marcacarro" name="marcacarro" required>
         
-        <label for="anocarro">ano:</label>
+        <label for="anocarro">Ano:</label>
         <input type="text" id="anocarro" name="anocarro" required>
         
         
-        <label for="placacarro">placa:</label>
+        <label for="placacarro">Placa:</label>
         <input type="text" id="placacarro" name="placacarro" required>
 
-        <label for="capacidadecarro">capacidade:</label>
+        <label for="capacidadecarro">Capacidade:</label>
         <input type="number" id="capacidadecarro" name="capacidadecarro" required>
         
-        <button type="submit">cadastrar veiculo</button>
+        <button type="submit">Cadastrar veiculo</button>
     </form>
         </main>

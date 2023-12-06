@@ -177,7 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="cadastrocarro.php">Cadastrar carro</a>
         <a href="editarcarro.php">Editar carro</a>
         <a href="paginaagendamento.php">Agendar aula</a>
-        <a href="login.php">Sair</a>
+        <a href="paginalogin.php">Sair</a>
 
     </div>
     <div class="conteudo">

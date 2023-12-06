@@ -109,6 +109,9 @@
         <form action="tratamento_dados/agendamento.php" method="POST">
         <label for="veiculoaula">Selecione o veiculo :</label>
         <select id="veiculoaula" name="veiculoaula" required>
+        <optgroup label="Carro do Cliente">
+        
+        </optgroup>
         <?php
         include "conexao.php";
 
@@ -123,12 +126,37 @@
         
         
         <label for="dataaula">Selecione a data :</label>
-        <input type="date" id="dataaula" name="dataaula" required>
+        <input type="date" id="dataaula" name="dataaula" required required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="99/99/1111">
 
 
         <label for="horarioaula">horario desejado:</label>
 
-        <input type="time" id="hora-desejada" name="hora-desejada" required>
-        <button>confirmar</button>
+        <input type="time" id="horadesejada" name="horadesejada" required pattern="[0-9]{2}:[0-9]{2}h" placeholder="99:11h">
+        <button onclick="validarData()">Confirmar</button>
         </form>
+        <script>
+            function validarData() {
+            // Obtém a data e a hora do formulário
+            var inputData = document.getElementById('dataaula').value;
+            var inputHora = document.getElementById('horadesejada').value;
+
+            // Cria um objeto de data
+            var data = new Date(inputData + ' ' + inputHora);
+
+            // Verifica se a data está em um dia útil (de segunda a sexta-feira)
+            var diaSemana = data.getDay();
+            if (diaSemana >= 1 && diaSemana <= 5 && horadesejada >= 9 && horadesejada < 17) {
+            // Verifica se o horário está dentro do horário comercial (9h às 17h)
+            var horadesejada = dataaula.getHours();
+            if (horadesejada >= 9 && horadesejada < 17) {
+                alert('A data e o horário são válidos.');
+            } else {
+                alert('O horário não é válido para o horário comercial (9h às 17h).');
+            }
+            } else {
+            alert('A data não é válida para um dia útil (segunda a sexta-feira).');
+            }
+        }
+        </script>
+        
     </body>

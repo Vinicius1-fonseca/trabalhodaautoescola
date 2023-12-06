@@ -37,7 +37,7 @@
             text-decoration: none;
             padding: 25px;
             margin-left: -2px;
-            border-radius: 5px;
+
         }
         svg{
             margin-left: 1100px;
@@ -51,6 +51,7 @@
             align-items: flex-start; 
             flex-grow: 1;
             padding: 20px;
+
         }
 
         .materia-titulo {
@@ -62,7 +63,6 @@
             background-color: #fff;
             width: 180px;
             height: 260px;
-            border-radius: 12px;
             box-shadow: 4px 4px 12px #aaaa;
             margin-right: 20px;
             margin-bottom: 400px;
@@ -70,8 +70,7 @@
         .card img {
             width: 100%;
             height: 130px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+
         }
         .card div {
             display: flex;
@@ -119,8 +118,9 @@
     <div class="header">
         <img src="imagens/WhatsApp Image 2023-12-01 at 16.40.15.png" alt="">
         <div class="links">
-        
-            <a href="dashboard.php">voltar pro menu principal</a>
+            <a href="cadastrocarro.php">Cadastrar carro</a>
+            <a href="paginalogin.php">sair</a>
+            
         </div>
         <a href="editarcadastro.php">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -131,30 +131,11 @@
     </div>
     <img class="teste" src="imagens/OIG.jpg" alt="">
     
-        <form action="tratamento_dados/agendamento.php" method="POST">
-        <label for="veiculoaula">Selecione o veiculo :</label>
-        <select id="veiculoaula" name="veiculoaula" required>
-        <?php
-        include "conexao.php";
-
-        $sql = "SELECT modelo FROM carros WHERE id NOT IN (SELECT carro_id FROM agendamentos)";
-        $result = $con->query($sql);
-
-        while ($row = $result->fetch_assoc()) {
-        echo '<option value="' . $row['modelo'] . '">' . $row['modelo'] . '</option>';
-        }
-        ?>
-        </select>
-        
-        
-        <label for="dataaula">Selecione a data :</label>
-        <input type="date" id="dataaula" name="dataaula" required>
-
-
-        <label for="horarioaula">horario desejado:</label>
-
-        <input type="time" id="hora-desejada" name="hora-desejada" required>
-        <button>confirmar</button>
-        </form>
-    </body>
-
+    <br>
+    
+    <div class="conteudo">
+        <h1 class="carroscadastrados">Carros cadastrados </h1>
+    </div><br><br><br><br><br><br><br><br><br><br>
+    <div class="conteudo">
+        <h1 class="Alunoscasadtrados">Alunos cadastrados </h1>
+    </div>
