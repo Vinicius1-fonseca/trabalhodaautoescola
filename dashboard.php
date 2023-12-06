@@ -18,13 +18,6 @@
         img{
             width: 200px;
             height: 200px;
-            background: #fff;
-             color: #fff;
-             border-width: 1px 1px 1px 1px; 
-             border-style:solid; 
-             border-color: #000 #000 #000 #000; 
-             padding: 3px;
-        
         }
 
         .header {
@@ -35,8 +28,9 @@
             display: flex;
             align-items: center;
         }
+
+
         .header a {
-           
             background-color: #fff;
             color: black;
             text-decoration: none;
@@ -75,8 +69,8 @@
         .card img {
             width: 100%;
             height: 130px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
         }
         .card div {
             display: flex;
@@ -88,11 +82,10 @@
         }
         .card h1 {
             font-size: 1.2rem;
-            color:#000
         }
         .card h2 {
             font-size: .9rem;
-            color:#000;
+            color: #aaaa;
         }
         .card button {
             background-color: #2192FF;
