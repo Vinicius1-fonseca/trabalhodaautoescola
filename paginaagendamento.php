@@ -148,15 +148,16 @@
             if (diaSemana >= 1 && diaSemana <= 5 && horadesejada >= 9 && horadesejada < 17) {
             // Verifica se o horário está dentro do horário comercial (9h às 17h)
             var horadesejada = dataaula.getHours();
+            if (diaSemana >= 1 && diaSemana <= 5) {
             if (horadesejada >= 9 && horadesejada < 17) {
                 alert('A data e o horário são válidos.');
             } else {
                 alert('O horário não é válido para o horário comercial (9h às 17h).');
             }
             } else {
-            alert('A data não é válida para um dia útil (segunda a sexta-feira).');
+                alert('A data não é válida para um dia útil (segunda a sexta-feira).');
             }
-        }
+        }}
         </script>
         
     </body>
